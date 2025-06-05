@@ -4,7 +4,6 @@ from aiogram.utils.keyboard import InlineKeyboardBuilder
 tasks_choose = InlineKeyboardMarkup(inline_keyboard=[
     [InlineKeyboardButton(text="Посмотреть задачи", callback_data = 'check_tasks'),
     InlineKeyboardButton(text="Добавить задачу", callback_data = 'append_task'),
-    InlineKeyboardButton(text="Удалить задачу", callback_data = 'delete_task'),
     InlineKeyboardButton(text="Назад", callback_data = 'start')]
 ])
 

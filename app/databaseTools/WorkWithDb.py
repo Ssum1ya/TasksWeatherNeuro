@@ -34,5 +34,8 @@ class WorkWithDb:
         with open(path, 'r') as file:
             data = json.load(file)
 
-        tasks = data[id]
+        if id in data.keys():
+            tasks = data[id]
+        else:
+            tasks = []
         return tasks
