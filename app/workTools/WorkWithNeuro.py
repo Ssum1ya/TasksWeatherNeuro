@@ -37,7 +37,7 @@ class WorkWithNeuro:
             "messages" : [
             {
                 "role" : "user",
-                "content" : f"{prompt}. Отвечай на русском языке"
+                "content" : f"{prompt}. Отвечай на русском языке. Отвечай кратко пожалуйста"
             }
             ],
             
