@@ -64,7 +64,8 @@ async def question_start(callback: CallbackQuery, state: FSMContext):
 async def question(message: Message, state: FSMContext):
     await state.update_data(question = message.text)
     await state.clear()
-    await message.answer(WorkWithNeuro.answer(message.text, AI_TOKEN))
+    return_answer = await WorkWithNeuro.generate_response(message.text, AI_TOKEN)
+    await message.answer(return_answer)
 
 
 @router.callback_query(F.data == 'Tasks')
